@@ -15,9 +15,8 @@ File Upload Script which built on Python Flask and [jQuery-File-Upload](https://
 $ pip install -r requirements.txt
 ```
 
-Go to site-packages and replace mt940 folder with mt940 from the repository.
+- Go to site-packages and replace mt940 folder with mt940 from the repository.
 
-If the regex didn't work for your case. Change the reg-exp, pertaining to your case, in mt940/parser.py.
 
 - Run it:
 
@@ -27,4 +26,13 @@ $ python app.py
 
 - Go to http://localhost:5000
 
-Site-Credits: https://github.com/ngoduykhanh/flask-file-uploader
+If the regex didn't work for your case. Change the reg-exp, pertaining to your case, in mt940/parser.py.
+Here it's:
+```
+{1:[^<>]*?-}
+```
+Finds between splits each transaction between {1: and -}. In your case it can be between {1: and }{5:
+
+Frontend-Credits: https://github.com/ngoduykhanh/flask-file-uploader
+
+Lib-Credits: https://github.com/WoLpH/mt940
